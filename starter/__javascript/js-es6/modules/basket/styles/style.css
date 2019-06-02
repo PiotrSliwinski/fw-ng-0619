@@ -1,0 +1,27 @@
+body{ 
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+}
+
+.shelf{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin:2rem 0;
+}
+
+.shelf p{
+	padding:1rem;
+	border:1px solid lightgrey;
+	margin:4px;
+	text-align: center;
+	width:12%;
+	min-width: 8rem;
+	letter-spacing: 1px;
+}
+
+.shelf span{
+	color:orangered;
+	padding-left: 0.5rem;
+}

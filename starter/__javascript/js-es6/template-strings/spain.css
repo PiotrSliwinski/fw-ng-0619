@@ -1,0 +1,39 @@
+
+body{
+    font-family: helvetica;
+    color:darkslategray;
+}
+
+.spain{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top:2rem;
+}
+
+.city{
+
+    padding:1rem;
+    border:1px solid lightgrey;
+    margin:4px;
+    text-align: center;
+    width:5rem;
+    letter-spacing: 1px;
+}
+
+.city p:first-child{
+    color: orangered;
+}
+
+.city:hover{
+    cursor: pointer;
+    background-color: ghostwhite;
+}
+
+.city:nth-of-type(odd){
+    transform: rotate(4deg);
+}
+.city:nth-of-type(even){
+    transform: rotate(-4deg);
+}
