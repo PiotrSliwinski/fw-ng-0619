@@ -1,31 +1,72 @@
+
 <section class="shop">
-    <h1>{{ shop.name }}</h1>
-    <h2>{{ getAddr() }}</h2>
-
-    <section class="produce">
-        <section
-            class="item"
-            [ngClass]="{ 'outstock' : !f.quantity }"
-            *ngFor="let f of stock"
-            (click)="f.quantity && buyItem(f)">
-
-            <p>{{ f.desc }}</p>
-            <p>{{ f.size }}</p>
-            <p>{{ f.quantity }}</p>
-            <p>{{ f.price | currency:"GBP":"£" }}</p>
-
-        </section>       
-    </section>
-
-    <hr/>
     
-    <section class="produce basket">
-        <section class="item" *ngFor="let f of basket">
-            <p>{{ f.desc }}</p>
-            <p>{{ f.price | currency:"GBP":"£" }}</p>
-        </section>
+    <!-- Composition : instances of another component
+    in the view of this component -->
+
+    <h1>{{ shopDetails.name }}</h1>
+    <h2>{{ getAddress( shopDetails ) }}</h2>
+
+    <!-- 
+        ngFor Angular-specific attribute : DIRECTIVE 
+        structural directives : modifies DOM at runtime
+    -->
+
+    <!-- 
+        Outer section with class of PRODUCE
+        Inner section with class of item : ngFor to repeat/iterate over shopData array of objects
+     -->
+
+     <section class="produce">      
+
+        <!-- (click)="item.quantity && buyItem(item)" -->
+
+        <!-- Conditional CSS styling : ngClass will evalate object string
+        apply the class called OUTSTOCK if expression is true -->
+
+        <!-- 
+            Pass arguments into this component-instance using INPUTs 
+            Inside item/item.component.ts : define INPUT called item
+
+            PRODUCT : { desc: "Carrots", price: 1.85,size:"1kg", quantity:4,code:"1278-ca" }
+        -->
+
+        <app-item [item]="product" *ngFor="let product of shopData" class="item"></app-item>
+
+         <!-- <section 
+            *ngFor="let item of shopData"
+            [ngClass]="{ 'outstock' : !item.quantity }"
+            (click)="item.quantity ? buyItem(item) : null"
+            class="item" 
+            >
+
+            <p>{{ item.desc }}</p>
+            <p>{{ item.size }}</p>
+            <p>{{ item.quantity }}</p>
+            <p>{{ item.price | currency : "GBP" }}</p>
+        </section> -->
+
+     </section>
+
+     <hr/>
+
+     <section class="produce basket">      
+
+            <section 
+               *ngFor="let item of basket"
+               class="item" 
+               (click)="removeFromBasket(item)"
+               >
+   
+               <p>{{ item.desc }}</p>
+               <p>{{ item.size }}</p>
+               <p>{{ item.quantity }}</p>
+               <p>{{ item.price | currency : "GBP" }}</p>
+           </section>
+   
     </section>
 
-    <p *ngIf="total">TOTAL {{ total | currency:"GBP":"£" }}</p>
+    <p *ngIf="basket.length">{{ basketTotal() | currency : "GBP" }}</p>
 
+    <p *ngIf="basket.length" (click)="empty()">Empty</p>
 </section>

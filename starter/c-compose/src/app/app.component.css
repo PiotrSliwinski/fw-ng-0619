@@ -35,6 +35,8 @@
     background-color: beige;
 }
 
+/* Contextual selectors : if element with a class of ITEM is contained within an element wiht
+class of BASKET then apply this style */
 .basket .item{
     cursor:default;
 }
