@@ -1,0 +1,13 @@
+<section class="vote">
+
+	<span (click)="empty()" class="button">Empty</span>
+	<span (click)="testData()" class="button">Test Data</span>
+
+    <img src="assets/card.jpg" (click)="vote()"/>
+
+    <section class="votes">
+        <!-- <p class="village" *ngFor="let v of votes">{{ v }}</p> -->
+        <p class="village" *ngFor="let v of votes | async">{{ v }}</p>
+    </section>
+
+</section>

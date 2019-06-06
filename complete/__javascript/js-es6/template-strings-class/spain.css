@@ -1,0 +1,51 @@
+
+body{
+    font-family: helvetica;
+    color:darkslategray;
+}
+
+.spain{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top:2rem;
+}
+
+.city{
+
+    padding:1rem;
+    border:1px solid lightgrey;
+    margin:4px;
+    text-align: center;
+    width:5rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.city p:first-child{
+    color: orangered;
+}
+
+.city:hover{
+    background-color: ghostwhite;
+}
+
+.city:nth-of-type(odd){
+    transform: rotate(4deg);
+}
+.city:nth-of-type(even){
+    transform: rotate(-4deg);
+}
+
+.tour{
+    border-top: 1px solid lightgrey;
+    margin-top:2rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.selected{
+    opacity: 0.24;
+    cursor: default;
+}

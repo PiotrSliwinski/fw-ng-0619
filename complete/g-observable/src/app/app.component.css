@@ -1,0 +1,38 @@
+.observe{
+	font-family: tahoma;
+	text-align: center;
+	font-size: 1.25rem;
+	width:100%;
+}
+
+.demo{
+	padding: 1rem;
+	border-bottom: 1px solid lightgrey;
+	text-transform:captialize;
+}
+
+input{
+	padding:1rem;
+	font-size: 1.5rem;	
+}
+
+span{
+	color:orangered;
+	padding-left: 0.5rem;
+}
+
+.weather{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-color: aliceblue;
+}
+
+.panel{
+	width:10rem;
+	border:1px solid lightgrey;
+	padding:0.5rem;
+	margin:2rem 0.5rem;
+	background-color: white;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Module Pattern</title>
+		<meta charset="UTF-8">
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="styles/style.css"/>
+	</head>
+	
+	<body>		
+		<img src="media/basket.jpeg" />
+
+		<section class="shelf"></section>
+
+		<!-- 
+		<script src="module-pattern/shop.js"></script>
+		<script src="module-pattern/draw.js"></script> 
+		-->
+
+		<!-- 
+			ES6 modules must be served/viewed from an HTTP address 
+			This file will load the other module.
+		-->
+		<script src="es6-modules/draw.js" type="module"></script>
+	</body>
+
+</html>

@@ -1,0 +1,77 @@
+
+.shop{
+    font-family: helvetica;
+    color: orangered;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.shop h2{
+    color:darkslategrey;
+    font-size: 1rem;
+}
+
+.produce{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+.item{
+    padding: 1rem 0.5rem;
+    border:2px solid lightgrey;
+    margin:0.25rem;
+    text-align: center;
+    font-size: 1rem;
+    width: 7rem;
+    cursor: pointer;
+    user-select: none;
+    color:darkslategrey;
+}
+
+.item:hover{
+    background-color: beige;
+}
+
+.basket .item{
+    cursor:default;
+}
+
+.basket .item:hover{
+    background-color:white;
+}
+
+p{
+    margin:0;
+    padding:0.2rem;
+}
+
+.outstock{
+    opacity: 0.4;
+    cursor:default;
+    border:2px dashed lightgrey;
+    font-style: italic;
+}
+
+.outstock:hover{
+   background-color: white;
+}
+
+hr{
+    border:10px solid rgba(0,0,0,0.05);
+}
+
+.empty{
+	background-color: orangered;
+	padding: 1rem;
+	border-radius: 4px;
+	text-align: center;
+	margin:1rem auto;
+	width: 4rem;
+	letter-spacing: 1px;
+	cursor: pointer;
+	font-size: 0.9rem;
+	color:white;
+}

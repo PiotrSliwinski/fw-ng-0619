@@ -1,0 +1,31 @@
+<section class="shop">
+    <h1>{{ shop.name }}</h1>
+    <h2>{{ getAddr() }}</h2>
+
+    <section class="produce">
+        <section
+            class="item"
+            [ngClass]="{ 'outstock' : !f.quantity }"
+            *ngFor="let f of stock"
+            (click)="f.quantity && buyItem(f)">
+
+            <p>{{ f.desc }}</p>
+            <p>{{ f.size }}</p>
+            <p>{{ f.quantity }}</p>
+            <p>{{ f.price | currency:"GBP":"£" }}</p>
+
+        </section>       
+    </section>
+
+    <hr/>
+    
+    <section class="produce basket">
+        <section class="item" *ngFor="let f of basket">
+            <p>{{ f.desc }}</p>
+            <p>{{ f.price | currency:"GBP":"£" }}</p>
+        </section>
+    </section>
+
+    <p *ngIf="total">TOTAL {{ total | currency:"GBP":"£" }}</p>
+
+</section>

@@ -1,0 +1,12 @@
+
+<section 
+	class="item" 
+	(click)="item.quantity && select.emit()" 
+	[ngClass]="{ 'outstock' : !item.quantity }">
+
+	<p>{{ item.desc }}</p>
+	<p *ngIf="detail">{{ item.size }}</p>
+	<p *ngIf="detail">{{ item.quantity }}</p>
+	<p>{{ item.price | currency:"GBP":"£" }}</p>
+
+</section>   

@@ -1,0 +1,12 @@
+section{
+    font-family: tahoma;
+    font-size: 1.25rem;
+}
+
+span{
+    padding:0.5rem;
+    margin-right:0.5rem;
+    background-color: orangered;
+    cursor: pointer;
+    color:white;
+}
